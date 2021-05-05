@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ElectroCode</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    function magnify(imgID, zoom) {
+     var img, glass, w, h, bw;
+     img = document.getElementById(imgID);
+   
+     /* Create magnifier glass: */
+     glass = document.createElement("DIV");
+     glass.setAttribute("class", "img-magnifier-glass");
+   
+     /* Insert magnifier glass: */
+     img.parentElement.insertBefore(glass, img);
+   
+     /* Set background properties for the magnifier glass: */
+     glass.style.backgroundImage = "url('" + img.src + "')";
+     glass.style.backgroundRepeat = "no-repeat";
+     glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+     bw = 3;
+     w = glass.offsetWidth / 2;
+     h = glass.offsetHeight / 2;
+   
+     /* Execute a function when someone moves the magnifier glass over the image: */
+     glass.addEventListener("mousemove", moveMagnifier);
+     img.addEventListener("mousemove", moveMagnifier);
+   
+     /*and also for touch screens:*/
+     glass.addEventListener("touchmove", moveMagnifier);
+     img.addEventListener("touchmove", moveMagnifier);
+     function moveMagnifier(e) {
+       var pos, x, y;
+       /* Prevent any other actions that may occur when moving over the image */
+       e.preventDefault();
+       /* Get the cursor's x and y positions: */
+       pos = getCursorPos(e);
+       x = pos.x;
+       y = pos.y;
+       /* Prevent the magnifier glass from being positioned outside the image: */
+       if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+       if (x < w / zoom) {x = w / zoom;}
+       if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+       if (y < h / zoom) {y = h / zoom;}
+       /* Set the position of the magnifier glass: */
+       glass.style.left = (x - w) + "px";
+       glass.style.top = (y - h) + "px";
+       /* Display what the magnifier glass "sees": */
+       glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+     }
+   
+     function getCursorPos(e) {
+       var a, x = 0, y = 0;
+       e = e || window.event;
+       /* Get the x and y positions of the image: */
+       a = img.getBoundingClientRect();
+       /* Calculate the cursor's x and y coordinates, relative to the image: */
+       x = e.pageX - a.left;
+       y = e.pageY - a.top;
+       /* Consider any page scrolling: */
+       x = x - window.pageXOffset;
+       y = y - window.pageYOffset;
+       return {x : x, y : y};
+     }
+   }
+   
+   </script>
+
+
+  <style>
+  .responsive {
+    width: 100%;
+    height: auto;
+    }
+
+    * {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">ElectroCode</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Projects</a></li>
+          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+          <li><a class="getstarted scrollto" href="index.html#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+ 
+  
+  <br><br>
+
+
+  <section id="about" class="about">
+    <a class="getstarted scrollto" style="text-align: center;"><h4 style="text-align: center;"><b><u>Smart Intravanous Stand</u></b></h4></a>
+        <br><br>
+    <div class="container">
+
+      <div class="row content">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+          <h4 style="color:dodgerblue;"><u><b>Introduction</b></u> :- </h4>
+          <p>Intravenous poles are those healthcare ancillary implements that aid
+            in holding and distributing medications to patients through intravenous injections. Intravenous infusion 
+            relies on the weight of the Intravenous tubing fluid. Perpetual follow-up of the intravenous bag is required
+             to supersede the fluid when vacated. Also, mobilization of the intravenous pole is required from patients 
+             and nurses.This leads to discomfort and inconvenience for both patients and hospital staff.</p><br>
+        
+             <h4 style="color:dodgerblue;"><u><b>Problems Statements</b></u> :- </h4>
+             <p>In hospitals, We saw that when the fluid inside the drip becomes completely empty  and the doctors/nurses
+             could not reach the patient timely to remove the needle from the veins , the pressure inside the veins 
+             overcomes the  pressure inside the IV, allowing the blood to flow back into the line which is not desired.</p><br>
+
+            <!--<img src="/Users/techno/Desktop/public (2)/public/assets/img/team/manoj1.JPG" alt="Nature" class="responsive">
+            --> 
+             <div class="img-magnifier-container">
+              <img id="myimage" class="responsive" src="/Users/techno/Desktop/public (2)/public/assets/img/team/manoj1.JPG" width="500" height="400" alt="Girl">
+            </div>
+
+             <h4 style="color:dodgerblue;"><u><b>Conclusion</b></u> :- </h4>
+             <p>Robotic Smart IV Stand was developed, and successfully used in Geetanjali Medical Hospital. When the 
+               system started, it gives glow to the green LED’s, ensuring that the veins are being infused with the 
+               fluid. When the drip solution is about to end, it gives a alert 	message to the doctor/nurse on the 
+               phone through node MCU. We can also check the system update on Android mobile Application and the red
+                LED’s indicate that drip solution 	is critically low. So that they can reach the patient timely
+                 to avoid the backflow of the bloodThe capability of the novel robot to hold a weight up to 20 kg
+                  while maintained balanced. The Smart IV Stand is used in the Hospitals, Army Medical Camps,
+                   Medical Dispensary, etc.</p><br>
+
+               <h4 style="color:dodgerblue;"><u><b>Future Implementations</b></u> :- </h4>
+               <p>Sound Module is used which will alert Nursing staff as well as family members as per the 
+                 voice command issued by patient.​</p><br>
+            
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+          <h4 style="color:dodgerblue;"><u><b>Existing IV Stands</b></u> :- </h4>
+             <p>Here in we have provided an overview of the IV poles that exists today in both developed and non-developed
+             countries.Their shape is  subtle and have limited features. With time, most of them cannot even bear the
+              weight of the bags . Moreover , they don’t have any alert system which could tell the nursing staff about
+               the emptied IV drip solution which often leads to blood backflow.</p><br>
+
+               <h4 style="color:dodgerblue;"><u><b>Methdology</b></u> :- </h4>
+               <p>We have first develop a IV Stand according to our requirement. Then, We have designed a system 
+                 Robotic Smart IV Stand based on IOT & Sensors. The system started, When the IV fluid bottle is 
+                 hanged  to the hook which is connected with the sensor then it gives glow to the green LED’s, 
+                 ensuring that the veins are being infused with the fluid. When the drip solution is about to end, 
+                 it gives a alert message to the doctor/nurse on the phone. </p>
+                
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+<script>
+    /* Execute the magnify function: */
+    magnify("myimage", 3);
+    /* Specify the id of the image, and the strength of the magnifier glass: */
+    </script>
+
+
+
+
+
+</body>
+
+</html>
